@@ -3,7 +3,7 @@
 @section('title', '🎮 Game Collection')
 
 @section('content')
-        <a href="/games/create" class="btn btn-success mb-3">🎮 Add Game</a>
+        <a href="/games/create" class="btn btn-success mb-3">🎮 Add Games</a>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
