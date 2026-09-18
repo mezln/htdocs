@@ -13,6 +13,7 @@
                     <th>Rating</th>
                     <th>Edit</th>
                     <th>Delete</th>
+                    <th>Show</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +26,7 @@
                         <td>{{ $game->platform }}</td>
                         <td>{{ $game->rating }}/10</td>
                          @php( $sum += $game->rating )
-
+                        <td> <a href="/games/show/{{ $game->id }}" class="btn btn-info btn-sm">Show</a> </td>
                         <td> <a href="/games/edit/{{ $game->id }}" class="btn btn-primary btn-sm">Edit</a> </td>
                         <td>
                             <form action="/games/destroy/{{ $game->id }}" method="post">
