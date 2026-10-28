@@ -15,6 +15,20 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @role('admin')
+                        <x-nav-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.*')">
+                            Permissies
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.*')">
+                            Rollen
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.role-permissions.index')" :active="request()->routeIs('admin.role-permissions.*')">
+                            Rol-permissies
+                        </x-nav-link>
+                        <x-nav-link :href="route('admin.user-roles.index')" :active="request()->routeIs('admin.user-roles.*')">
+                            Rol-gebruikers
+                        </x-nav-link>
+                    @endrole
                 </div>
             </div>
 
@@ -70,6 +84,20 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @role('admin')
+                <x-responsive-nav-link :href="route('admin.permissions.index')" :active="request()->routeIs('admin.permissions.*')">
+                    Permissies
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.*')">
+                    Rollen
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('admin.role-permissions.index')" :active="request()->routeIs('admin.role-permissions.*')">
+                    Rol-permissies
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('admin.user-roles.index')" :active="request()->routeIs('admin.user-roles.*')">
+                    Rol-gebruikers
+                </x-responsive-nav-link>
+            @endrole
         </div>
 
         <!-- Responsive Settings Options -->
